@@ -6,7 +6,6 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "shfmt",
         "css-lsp",
-        "luacheck",
         "shellcheck",
         "svelte-language-server",
         "typescript-language-server",
@@ -15,4 +14,3 @@ return {
     end
   }
 }
-
