@@ -4,6 +4,7 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
-keymap.set("n", "<C-a>", "gg<S-v>G")           -- SELECT ALL
+keymap.set("n", "<C-a>", "gg<S-v>G") -- SELECT ALL
 keymap.set("n", "sv", ":vsplit<Return>", opts) -- SPLIT WINDOW VERTICALLY
-keymap.set("n", "ss", ":split<Return>", opts)  -- SPLIT WINDOW HORIZONTALLY
+keymap.set("n", "ss", ":split<Return>", opts) -- SPLIT WINDOW HORIZONTALLY
+keymap.set("i", "<C-h>", "<C-w>", opts) -- DELETE A WORD
