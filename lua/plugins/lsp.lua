@@ -11,6 +11,6 @@ return {
         "typescript-language-server",
         "tailwindcss-language-server",
       })
-    end
-  }
+    end,
+  },
 }
