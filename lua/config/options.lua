@@ -3,17 +3,22 @@
 -- Add any additional options here
 
 -- DETECT IF USING WSL & SHARE CLIPBOARD
-if vim.fn.has('wsl') == 1 then
+if vim.fn.has("wsl") == 1 then
   vim.g.clipboard = {
-    name = 'WslClipboard',
+    name = "WslClipboard",
     copy = {
-      ['+'] = 'clip.exe',
-      ['*'] = 'clip.exe',
+      ["+"] = "clip.exe",
+      ["*"] = "clip.exe",
     },
     paste = {
-      ['+'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-      ['*'] = 'powershell.exe -c [Console]::Out.Write(($Get-Clipboard -Raw).tostring().replace("`r", ""))',
+      ["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+      ["*"] = 'powershell.exe -c [Console]::Out.Write(($Get-Clipboard -Raw).tostring().replace("`r", ""))',
     },
     cache_enabled = 0,
   }
 end
+
+-- LSP Server to use for Python.
+-- Set to "basedpyright" to use basedpyright instead of pyright.
+vim.g.lazyvim_python_lsp = "pyright"
+vim.g.lazyvim_python_ruff = "ruff_lsp"
